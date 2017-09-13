@@ -7,11 +7,7 @@ var stringifyJSON = function(obj) {
   let result = '';
 
   function stringify(o) {
-    if (o === undefined) {
-      return;
-    } else if (typeof o === 'function') {
-      return;
-    }
+    if (o === undefined || typeof o === 'function') { return; }
 
     if (typeof o === 'number') {
       result += o.toString();
